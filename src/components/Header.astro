@@ -1,12 +1,14 @@
 ---
 import { SITE_TITLE } from "../consts";
+import bg from "../assets/images/header-bg.png";
+import Logo from "../assets/terminal-logo.svg";
 ---
 
-<header
-  class="w-[100vw] bg-[url(../assets/images/header-bg.png)] bg-[100%] bg-no-repeat"
->
-  <nav class="py-20">
-    <h2 class="font-coda text-brand-blue text-center">
+<header class="relative w-screen">
+  <img src={bg.src} alt="bg" class="absolute -z-10 max-h-96 min-h-48 w-full" />
+  <nav class="flex flex-col items-center justify-center gap-4 py-20">
+    <a href="/"><Logo /></a>
+    <h2 class="font-coda text-brand-blue text-xl">
       <a href="/">{SITE_TITLE}</a>
     </h2>
   </nav>
