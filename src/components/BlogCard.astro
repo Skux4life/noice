@@ -3,6 +3,9 @@ const { title, description, pubDate } = Astro.props;
 ---
 
 <div class="bg-post rounded-xl p-8 leading-[160%]">
-  <h2 class="text-title pb-8 text-2xl">{title}</h2>
+  <div class="flex items-start justify-between gap-4 pb-8">
+    <h2 class="text-title text-2xl">{title}</h2>
+    <span class="text-span pt-1">{pubDate}</span>
+  </div>
   <p class="text-text">{description}</p>
 </div>

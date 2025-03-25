@@ -11,17 +11,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="flex h-full flex-col">
+  <body class="font-nunito flex h-full flex-col">
     <div class="flex-[1_0_auto]">
       <Header />
-      <main class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <main class="grid grid-cols-1 gap-8 px-8 md:grid-cols-2 xl:grid-cols-3">
         <BlogCard
           title={"This is a blog post"}
           description={"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident qui doloremque voluptate, assumenda quos nam ea! Sunt libero eligendi, quaerat atque earum officiis blanditiis iure beatae magni, rerum laboriosam nesciunt."}
+          pubDate={"2022-01-01"}
         />
         <BlogCard
           title={"This is a blog post"}
           description={"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident qui doloremque voluptate, assumenda quos nam ea! Sunt libero eligendi, quaerat atque earum officiis blanditiis iure beatae magni, rerum laboriosam nesciunt."}
+          pubDate={"2022-01-01"}
         />
         <BlogCard
           title={"This is a blog post"}
