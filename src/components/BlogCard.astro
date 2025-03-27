@@ -1,11 +1,12 @@
 ---
+import FormattedDate from "./FormattedDate.astro";
 const { title, description, pubDate } = Astro.props;
 ---
 
 <div class="bg-post rounded-xl p-8 leading-[160%]">
   <div class="flex items-start justify-between gap-4 pb-8">
     <h2 class="text-title text-2xl">{title}</h2>
-    <span class="text-span pt-1">{pubDate}</span>
+    <FormattedDate date={pubDate} />
   </div>
   <p class="text-text">{description}</p>
 </div>
