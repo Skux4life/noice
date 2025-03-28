@@ -3,17 +3,21 @@ import FormattedDate from "./FormattedDate.astro";
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
-<article class="max-w-[65ch] mx-auto">
-  <div>
-    {heroImage && <img width={720} height={360} src={heroImage} alt="" />
+<article class="mx-auto max-w-[65ch] px-2">
+  <div class="-mx-2">
+    {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
     <!-- hero -->
   </div>
-  <div>
-    <h1>{title}</h1>
+  <div class="flex items-center justify-between">
+    <h1 class="text-title my-2 text-3xl font-bold">{title}</h1>
     <FormattedDate date={pubDate} />
-      {updatedDate && (
-      <div>Last updated on <FormattedDate date={updatedDate} /></div>
-    )}
+    {
+      updatedDate && (
+        <div>
+          Last updated on <FormattedDate date={updatedDate} />
+        </div>
+      )
+    }
   </div>
 
   <slot />
