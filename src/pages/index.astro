@@ -9,10 +9,12 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <Layout
-  ><main class="grid grid-cols-1 gap-8 px-8 md:grid-cols-2 xl:grid-cols-3">
+  ><main
+    class="mx-auto grid max-w-lvh auto-rows-fr grid-cols-1 gap-8 px-8 md:grid-cols-2 xl:grid-cols-3"
+  >
     {
       posts.map((post) => (
-        <a href={`/blog/${post.id}/`}>
+        <a href={`/blog/${post.id}/`} class="h-full">
           <BlogCard
             title={post.data.title}
             description={post.data.description}
@@ -21,31 +23,5 @@ const posts = (await getCollection("blog")).sort(
         </a>
       ))
     }
-    <!-- <BlogCard -->
-    <!--   title={"This is a blog post"} -->
-    <!--   description={"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident qui doloremque voluptate, assumenda quos nam ea! Sunt libero eligendi, quaerat atque earum officiis blanditiis iure beatae magni, rerum laboriosam nesciunt."} -->
-    <!--   pubDate={"2022-01-01"} -->
-    <!-- /> -->
-    <!-- <BlogCard -->
-    <!--   title={"This is a blog post"} -->
-    <!--   description={"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident qui doloremque voluptate, assumenda quos nam ea! Sunt libero eligendi, quaerat atque earum officiis blanditiis iure beatae magni, rerum laboriosam nesciunt."} -->
-    <!--   pubDate={"2022-01-01"} -->
-    <!-- /> -->
-    <!-- <BlogCard -->
-    <!--   title={"This is a blog post"} -->
-    <!--   description={"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident qui doloremque voluptate, assumenda quos nam ea! Sunt libero eligendi, quaerat atque earum officiis blanditiis iure beatae magni, rerum laboriosam nesciunt."} -->
-    <!-- /> -->
-    <!-- <BlogCard -->
-    <!--   title={"This is a blog post"} -->
-    <!--   description={"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident qui doloremque voluptate, assumenda quos nam ea! Sunt libero eligendi, quaerat atque earum officiis blanditiis iure beatae magni, rerum laboriosam nesciunt."} -->
-    <!-- /> -->
-    <!-- <BlogCard -->
-    <!--   title={"This is a blog post"} -->
-    <!--   description={"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident qui doloremque voluptate, assumenda quos nam ea! Sunt libero eligendi, quaerat atque earum officiis blanditiis iure beatae magni, rerum laboriosam nesciunt."} -->
-    <!-- /> -->
-    <!-- <BlogCard -->
-    <!--   title={"This is a blog post"} -->
-    <!--   description={"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident qui doloremque voluptate, assumenda quos nam ea! Sunt libero eligendi, quaerat atque earum officiis blanditiis iure beatae magni, rerum laboriosam nesciunt."} -->
-    <!-- /> -->
   </main>
 </Layout>

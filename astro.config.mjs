@@ -9,7 +9,11 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   site: "https://example.com",
   integrations: [mdx(), sitemap()],
-
+  markdown: {
+    shikiConfig: {
+      theme: "nord",
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
   },
@@ -17,4 +21,3 @@ export default defineConfig({
     svg: true,
   },
 });
-
