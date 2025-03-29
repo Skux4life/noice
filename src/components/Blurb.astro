@@ -1,7 +1,7 @@
 ---
 import avatar from "../assets/images/noice.webp";
 import { Image } from "astro:assets";
-import NewWindow from "../assets/new_window.svg";
+import NewWindowLink from "./NewWindowLink.astro";
 ---
 
 <div
@@ -14,15 +14,8 @@ import NewWindow from "../assets/new_window.svg";
   />
   <div class="flex w-full flex-col gap-4 leading-[160%]">
     <div class="flex items-start justify-between gap-12">
-      <h2 class="text-title text-2xl font-bold">Just noice web development</h2>
-      <a
-        href="https://github.com/Skux4life"
-        target="_blank"
-        class="text-span flex items-center gap-2"
-        ><span class="text-brand-blue text-sm font-bold"
-          >GITHUB
-        </span><NewWindow /></a
-      >
+      <h1 class="text-title text-2xl font-bold">Just noice web development</h1>
+      <NewWindowLink linkText="Github" />
     </div>
     <p class="text-text lg:max-w-[80%]">
       Posts about anything related to web development that makes you want to say

@@ -14,7 +14,7 @@ const posts = (await getCollection("blog")).sort(
   >
     {
       posts.map((post) => (
-        <a href={`/blog/${post.id}/`} class="h-full">
+        <a href={`/blog/${post.id}/`}>
           <BlogCard
             title={post.data.title}
             description={post.data.description}

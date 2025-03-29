@@ -4,6 +4,8 @@ import bg from "../assets/images/header-bg.png";
 import Logo from "../assets/terminal-logo.svg";
 import { Image } from "astro:assets";
 import Blurb from "./Blurb.astro";
+
+const { useMainBlurb } = Astro.props;
 ---
 
 <header class="relative flex w-screen flex-col">
@@ -16,8 +18,11 @@ import Blurb from "./Blurb.astro";
       <a href="/">{SITE_TITLE.toUpperCase()}</a>
     </h2>
   </nav>
-  <!-- add in blurb component -->
-  <section class="mx-auto mb-8 w-[80vw] max-w-[1200px]">
-    <Blurb />
-  </section>
+  {
+    useMainBlurb && (
+      <section class="mx-auto mb-8 w-[80vw] max-w-[1200px]">
+        <Blurb />
+      </section>
+    )
+  }
 </header>
