@@ -1,0 +1,12 @@
+---
+import LinkIcon from "../assets/new_window.svg";
+const { linkText } = Astro.props;
+---
+
+<a
+  class="flex items-center gap-2"
+  href="https://github.com/Skux4life"
+  target="_blank"
+  ><span class="text-brand-blue font-bold uppercase">{linkText}</span><LinkIcon
+  /></a
+>
