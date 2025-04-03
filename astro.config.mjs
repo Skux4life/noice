@@ -7,7 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://noice-2jr.pages.dev",
   integrations: [mdx(), sitemap()],
   markdown: {
     shikiConfig: {

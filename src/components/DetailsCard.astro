@@ -3,19 +3,27 @@ import NewWindowLink from "./NewWindowLink.astro";
 import BackLink from "./BackLink.astro";
 import FormattedDate from "./FormattedDate.astro";
 import Author from "./Author.astro";
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+import { BLOG_ENTRIES_BASE_PATH } from "../consts.ts";
+const { filePath, title, description, pubDate, updatedDate, heroImage } =
+  Astro.props;
+
+const githubUrl = `https://github.com/Skux4life/noice/blob/main/${filePath}`;
 ---
 
 <section class="mx-auto mb-8 w-[80vw] max-w-[1200px]">
   <div
     class="bg-profile flex flex-col gap-8 rounded-2xl px-8 py-8 shadow-lg shadow-black/20"
   >
-    <div class="flex justify-between">
+    <div class="flex flex-wrap justify-between gap-4">
       <BackLink />
-      <NewWindowLink linkText="Github Version" />
+      <NewWindowLink link={githubUrl} linkText="Github Version" />
     </div>
-    <h1 class="text-title text-2xl font-bold">{title}</h1>
-    <div>
+    <h1
+      class="text-title text-center text-2xl font-bold text-balance md:text-3xl"
+    >
+      {title}
+    </h1>
+    <div class="flex flex-wrap justify-evenly gap-4">
       <FormattedDate date={pubDate} />
       <Author />
     </div>

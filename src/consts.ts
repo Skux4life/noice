@@ -3,3 +3,5 @@
 
 export const SITE_TITLE = "The Noice Blog";
 export const SITE_DESCRIPTION = "Welcome to the Noice blog!";
+
+export const BLOG_ENTRIES_BASE_PATH = "src/content/blog";

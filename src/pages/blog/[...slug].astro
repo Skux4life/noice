@@ -20,7 +20,7 @@ const { Content } = await render(post);
 ---
 
 <PostLayout>
-  <DetailsCard {...post.data} />
+  <DetailsCard filePath={post.filePath} {...post.data} />
   <BlogPost {...post.data}>
     <Prose>
       <Content />
