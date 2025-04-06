@@ -2,7 +2,7 @@
 title: "Bring some balance to your headings"
 description: "A truly great one liner that makes your headings look better"
 pubDate: "Apr 04 2025"
-heroImage: "/src/assets/images/weighing-balance.jpg"
+heroImage: "../../assets/images/weighing-balance.jpg"
 ---
 
 Have you ever wondered how to make your headings look better?
